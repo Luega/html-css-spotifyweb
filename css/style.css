@@ -7,6 +7,10 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
 }
+:root {
+    --first-color: #a3a3a3;
+    --second-color: #fdfdfd; 
+}
 /* GENERAL-CLASSES */
 .float-left {
     float: left;
@@ -21,42 +25,56 @@ html {
 main {
     width: 100;
     height: calc(100vh - 80px);
-    background-color: aqua;
 }
 /* NAV */
 main nav {
     width: 15%;
     height: 100%;
-    background-color: blue;
+    padding: 0 1%;
+    background-color: rgba(0,0,0,255);
     flex-direction: column;
 }
-nav .logo {
-    width: 100%;
-    height: 15%;
-    background-color: chocolate;
+/* LOGO */
+.logo img {
+    width: 75%;
+    padding-top: 7%;
+    padding-bottom: 10%;
 }
-nav .menu {
-    width: 100%;
-    height: 15%;
-    background-color: green;
+/* MENU */
+nav ul.menu-nav {
+    list-style: none;
+    line-height: 2em;
 }
+.menu-nav a {
+    text-decoration: none;
+}
+.menu-nav span {
+    color: var(--first-color);
+    font-weight: 500;
+}
+.menu-nav img {
+    width: 15%;
+    vertical-align: middle;
+    filter: opacity(60%);
+}
+/* PLAYLIST */
 nav .playlist {
     width: 100%;
     height: 15%;
     background-color: gold;
 }
+/* APP-INSTALLATION */
 nav .app-installation {
     width: 100%;
     height: 15%;
     background-color: purple;
 }
-
 /* /NAV */
 /* CONTAINER-RIGHT */
 main .container-right {
     width: 85%;
     height: 100%;
-    background-color: blueviolet;
+    background-color: rgba(20,25,34,255);
     overflow-y: scroll;
 }
 /* /CONTAINER-RIGHT */
@@ -65,6 +83,6 @@ main .container-right {
 footer {
     width: 100%;
     min-height: 80px;
-    background-color: chartreuse;
+    background-color: rgba(40,40,40,255);
 }
 /* /FOOTER */
