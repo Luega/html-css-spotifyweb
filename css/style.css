@@ -7,3 +7,41 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
 }
+/* GENERAL-CLASSES */
+.clear-fix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* /GENERAL-CLASSES */
+/* MAIN */
+main {
+    width: 100;
+    height: calc(100vh - 80px);
+    background-color: aqua;
+}
+/* NAV */
+main nav {
+    width: 15%;
+    height: 100%;
+    background-color: blue;
+    float: left;
+}
+/* /NAV */
+/* CONTAINER-RIGHT */
+main .container-right {
+    width: 85%;
+    height: 100%;
+    background-color: blueviolet;
+    float: left;
+    overflow-y: scroll;
+}
+/* /CONTAINER-RIGHT */
+/* /MAIN */
+/* FOOTER */
+footer {
+    width: 100%;
+    min-height: 80px;
+    background-color: chartreuse;
+}
+/* /FOOTER */
