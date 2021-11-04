@@ -40,7 +40,7 @@ main {
     overflow: hidden;
 }
 /* NAV */
-main nav {
+main .nav-left {
     width: var(--nav-width-normal);
     height: 100%;
     padding: 0.3em 1em;
@@ -155,15 +155,8 @@ nav .bottom-nav {
 }
 /* /BOTTOM-NAV */
 /* /NAV */
-/* CONTAINER-RIGHT */
-main .container-right {
-    width: calc(100% - var(--nav-width-normal));
-    height: 100%;
-    background-color: var(--background-color-container-right);
-    overflow: auto;
-}
 /* CALL-TO-ACTION */
-.container-right .call-to-action {
+.call-to-action {
     width: calc(100% - var(--nav-width-normal));
     height: var(--call-to-action-height);
     line-height: var(--call-to-action-height);
@@ -171,8 +164,10 @@ main .container-right {
     text-align: right;
     vertical-align: middle;
     position: fixed;
+    top: 0;
+    right: 0;
 }
-.container-right .call-to-action button {
+.call-to-action button {
     font-weight: bold;
     padding: 1em 3em;
     margin-right: 1em;
@@ -180,12 +175,39 @@ main .container-right {
     border-radius: 25px;
     text-transform: uppercase;
 }
-.container-right .call-to-action button a {
+.call-to-action button a {
     color: var(--second-color);
     text-decoration: none;
 }
-/* CONTENT-AREA */
-
+/* /CALL-TO-ACTION */
+/* CONTAINER-RIGHT */
+main .container-right {
+    width: calc(100% - var(--nav-width-normal));
+    height: 100%;
+    background-color: var(--background-color-container-right);
+    padding-top: var(--call-to-action-height);
+    overflow: auto;
+}
+/* NAV */
+.container-right nav {
+    width: 100%;
+    line-height: 3em;
+    text-align: center;
+}
+.container-right nav ul {
+    list-style: none;
+}
+.container-right nav a {
+    color: var(--first-color);
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.7em;
+}
+/* FIRST-ROW */
+.first-row h2 {
+    
+}
 /* /CONTAINER-RIGHT */
 /* /MAIN */
 /* FOOTER */
