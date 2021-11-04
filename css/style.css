@@ -12,6 +12,7 @@ html {
     --nav-width-normal: 230px;
     /* height */
     --bottom-nav-height: 70px;
+    --call-to-action-height: 80px;
     --footer-height-normal: 80px;
     /* color */
     --first-color: #a3a3a3;
@@ -19,6 +20,7 @@ html {
     /* background-color */
     --background-color-nav: rgba(0,0,0,255);
     --background-color-container-right: rgba(20,25,34,255);
+    --background-color-call-to-action: rgba(0,0,0,0.4);
     --background-color-footer: rgba(40,40,40,255);
 }
 /* GENERAL-CLASSES */
@@ -148,6 +150,9 @@ nav .bottom-nav {
     font-size: 0.7em;
     font-weight: bold;
 }
+.bottom-nav a {
+    text-decoration: none;
+}
 /* /BOTTOM-NAV */
 /* /NAV */
 /* CONTAINER-RIGHT */
@@ -157,6 +162,30 @@ main .container-right {
     background-color: var(--background-color-container-right);
     overflow: auto;
 }
+/* CALL-TO-ACTION */
+.container-right .call-to-action {
+    width: calc(100% - var(--nav-width-normal));
+    height: var(--call-to-action-height);
+    line-height: var(--call-to-action-height);
+    background-color: var(--background-color-call-to-action);
+    text-align: right;
+    vertical-align: middle;
+    position: fixed;
+}
+.container-right .call-to-action button {
+    font-weight: bold;
+    padding: 1em 3em;
+    margin-right: 1em;
+    background-color: transparent;
+    border-radius: 25px;
+    text-transform: uppercase;
+}
+.container-right .call-to-action button a {
+    color: var(--second-color);
+    text-decoration: none;
+}
+/* CONTENT-AREA */
+
 /* /CONTAINER-RIGHT */
 /* /MAIN */
 /* FOOTER */
