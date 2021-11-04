@@ -9,7 +9,12 @@ html {
 }
 :root {
     --first-color: #a3a3a3;
-    --second-color: #fdfdfd; 
+    --second-color: #fdfdfd;
+    --background-color-nav: rgba(0,0,0,255);
+    --background-color-container-right: rgba(20,25,34,255);
+    --background-color-footer: rgba(40,40,40,255);
+    --nav-width-normal: 230px; 
+    --footer-height-normal: 80px;
 }
 /* GENERAL-CLASSES */
 .float-left {
@@ -24,15 +29,15 @@ html {
 /* MAIN */
 main {
     width: 100%;
-    height: calc(100vh - 80px);
-    font-size: 0.5em;
+    height: calc(100vh - var(--footer-height-normal));
+    overflow: hidden;
 }
 /* NAV */
 main nav {
-    width: 150px;
+    width: var(--nav-width-normal);
     height: 100%;
     padding: 0 1%;
-    background-color: rgba(0,0,0,255);
+    background-color: var(--background-color-nav);
     flex-direction: column;
 }
 /* LOGO */
@@ -44,7 +49,6 @@ main nav {
 /* MENU */
 nav ul.menu-nav {
     list-style: none;
-    line-height: 2.5em;
 }
 .menu-nav a {
     text-decoration: none;
@@ -86,6 +90,7 @@ nav .playlist {
 }
 ul.list-playlist {
     list-style: none;
+    overflow: auto;
 }
 .list-playlist a {
     color: var(--first-color);
@@ -95,20 +100,25 @@ ul.list-playlist {
     line-height: 2.5em;
 }
 /* APP-INSTALLATION */
+nav .app-installation {
+    width: 100%;
+    height: 10%;
+    background-color: chartreuse;
+}
 /* /NAV */
 /* CONTAINER-RIGHT */
 main .container-right {
-    width: calc(100% - 150px);
+    width: calc(100% - var(--nav-width-normal));
     height: 100%;
-    background-color: rgba(20,25,34,255);
-    overflow-y: scroll;
+    background-color: var(--background-color-container-right);
+    overflow: auto;
 }
 /* /CONTAINER-RIGHT */
 /* /MAIN */
 /* FOOTER */
 footer {
     width: 100%;
-    min-height: 80px;
-    background-color: rgba(40,40,40,255);
+    min-height: var(--footer-height-normal);
+    background-color: var(--background-color-footer);
 }
 /* /FOOTER */
