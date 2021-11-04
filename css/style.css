@@ -8,13 +8,18 @@ html {
     font-size: 100%;
 }
 :root {
+    /* width */
+    --nav-width-normal: 230px;
+    /* height */
+    --bottom-nav-height: 70px;
+    --footer-height-normal: 80px;
+    /* color */
     --first-color: #a3a3a3;
-    --second-color: #fdfdfd;
+    --second-color: #fdfdfd; 
+    /* background-color */
     --background-color-nav: rgba(0,0,0,255);
     --background-color-container-right: rgba(20,25,34,255);
     --background-color-footer: rgba(40,40,40,255);
-    --nav-width-normal: 230px; 
-    --footer-height-normal: 80px;
 }
 /* GENERAL-CLASSES */
 .float-left {
@@ -36,9 +41,15 @@ main {
 main nav {
     width: var(--nav-width-normal);
     height: 100%;
-    padding: 0 1%;
+    padding: 0.3em 1em;
     background-color: var(--background-color-nav);
     flex-direction: column;
+}
+/* TOP-NAV */
+nav .top-nav {
+    width: 100%;
+    height: calc(100% - var(--bottom-nav-height));
+    overflow: hidden;
 }
 /* LOGO */
 .logo img {
@@ -50,61 +61,94 @@ main nav {
 nav ul.menu-nav {
     list-style: none;
 }
+.menu-nav li {
+    margin-bottom: 0.5em;
+}
 .menu-nav a {
     text-decoration: none;
 }
 .menu-nav span {
     color: var(--first-color);
-    font-weight: 500;
 }
 .menu-nav img {
-    width: 10%;
+    width: 15%;
     vertical-align: middle;
     filter: opacity(60%);
 }
 /* PLAYLIST */
 nav .playlist {
+    height: 70%;
     margin-top: 1.5em;
 }
-.playlist h2 {
+.playlist .title-playlist {
     color: var(--second-color);
-    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
     text-transform: uppercase;
 }
 .playlist button {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 .playlist i {
-    font-size: 1em;
-    font-weight: bolder;
-    margin: 0.5em 0.3em 0.5em 0;
+    font-size: 1.5em;
     padding: 0.3em;
     background-color: var(--first-color);
     border-radius: 1px;
-    cursor: pointer;
 }
 .playlist span {
     color: var(--first-color);
-    font-weight: 500;
+    font-size: 1.3em;
 }
 ul.list-playlist {
+    height: 70%;
+    padding: 1em 0 1em 0;
     list-style: none;
     overflow: auto;
 }
+.list-playlist li {
+    line-height: 1.8em;
+}
 .list-playlist a {
     color: var(--first-color);
+    font-size: 0.8em;
     text-decoration: none;
 }
-.list-playlist li {
-    line-height: 2.5em;
-}
-/* APP-INSTALLATION */
-nav .app-installation {
+/* /TOP-NAV */
+/* BOTTOM-NAV */
+nav .bottom-nav {
     width: 100%;
-    height: 10%;
-    background-color: chartreuse;
+    height: var(--bottom-nav-height);
+    line-height: 2em;
 }
+.bottom-nav .app-installation {
+    border-bottom: 1px solid var(--first-color);
+    margin-bottom: 0.3em;
+}
+.bottom-nav .app-installation img {
+    width: 15px;
+    height: auto;
+    vertical-align: middle;
+}
+.bottom-nav .user img {
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.bottom-nav .app-installation span {
+    color: var(--first-color);
+    font-size: 0.6em;
+    font-weight: bold;
+}
+.bottom-nav .user span {
+    color: var(--second-color);
+    font-size: 0.7em;
+    font-weight: bold;
+}
+/* /BOTTOM-NAV */
 /* /NAV */
 /* CONTAINER-RIGHT */
 main .container-right {
