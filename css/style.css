@@ -217,15 +217,16 @@ main .container-right {
     margin: 1em 0;
 }
 .first-row .recent-songs {
+    width: 100%;
     justify-content: space-between;
 }
 .first-row .recent-song {
-    width: 15%;
+    max-width: 150px;
+    margin-right: 10px;
     text-align: center;
 }
 .first-row img {
     width: 100%;
-    min-width: 100px;
 }
 .first-row .recent-song h4 {
     color: var(--second-color);
