@@ -259,6 +259,8 @@ footer {
     width: 100%;
     height: var(--footer-height-normal);
     background-color: var(--background-color-footer);
+    justify-content: space-between;
+    align-items: center;
 }
 /* LEFT-FOOTER */
 .left-footer {
@@ -293,4 +295,52 @@ footer {
     margin-right: 10px;
 } 
 /* CENTER-FOOTER */
+.center-footer {
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+/* TOP */
+.center-footer .top {
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.center-footer .top button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.center-footer .top i {
+    color: var(--second-color);
+    font-size: 1em;
+    margin: 0 15px;
+    vertical-align: middle;
+}
+.center-footer .top .fa-play-circle {
+    font-size: 2em;
+}
+/* BOTTOM */
+.center-footer .bottom {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.center-footer .bottom span {
+    color: var(--second-color);
+    font-size: 0.6em;
+}
+.center-footer .bottom .bar {
+    width: 80%;
+    height: 4px;
+    background-color: var(--first-color);
+    border-radius: 10px;
+}
+.center-footer .bottom .bar .listened {
+    width: 45%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+}
 /* /FOOTER */
