@@ -38,6 +38,9 @@ html {
 a {
     text-decoration: none;
 }
+.padding-left {
+    padding-left: 10px;
+}
 /* /GENERAL-CLASSES */
 /* MAIN */
 main {
@@ -49,7 +52,6 @@ main {
 main .nav-left {
     width: var(--nav-width-normal);
     height: 100%;
-    padding: 0.3em 1em;
     background-color: var(--background-color-nav);
     flex-direction: column;
 }
@@ -255,7 +257,40 @@ main .container-right {
 /* FOOTER */
 footer {
     width: 100%;
-    min-height: var(--footer-height-normal);
+    height: var(--footer-height-normal);
     background-color: var(--background-color-footer);
 }
+/* LEFT-FOOTER */
+.left-footer {
+    width: 25%;
+    height: 100%;
+    align-items: center;
+}
+.left-footer img {
+    width: 45px;
+    margin-right: 10px;
+}
+.titles-music-footer {
+    margin-right: 35px;
+}
+.left-footer span {
+    display: block;
+}
+.left-footer .title {
+    color: var(--second-color);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0;
+}
+.left-footer .sub {
+    color: var(--first-color);
+    font-size: 0.6em;
+}
+.left-footer a {
+    color: var(--first-color);
+}
+.left-footer .fa-heart {
+    margin-right: 10px;
+} 
+/* CENTER-FOOTER */
 /* /FOOTER */
