@@ -75,16 +75,25 @@ nav ul.menu-nav {
 .menu-nav li {
     margin-bottom: 0.5em;
 }
-.menu-nav a {
-    text-decoration: none;
-}
-.menu-nav span {
+.menu-nav .title-menu {
     color: var(--first-color);
 }
-.menu-nav img {
+.menu-nav .img-menu {
     width: 15%;
     vertical-align: middle;
     filter: opacity(60%);
+    border-left: 2px solid var(--underline-color);
+}
+
+.menu-nav li:active .title-menu,
+.menu-nav li:focus .title-menu,
+.menu-nav li:hover .title-menu {
+    color: var(--second-color);
+}
+.menu-nav li:active .img-menu,
+.menu-nav li:focus .img-menu,
+.menu-nav li:hover .img-menu {
+    filter: opacity(100%);
 }
 /* PLAYLIST */
 nav .playlist {
@@ -112,6 +121,12 @@ nav .playlist {
     color: var(--first-color);
     font-size: 1.3em;
 }
+.playlist button:hover span {
+    color: var(--second-color);
+}
+.playlist button:hover i {
+    background-color: var(--second-color);
+}
 ul.list-playlist {
     height: 70%;
     padding: 1em 0 1em 0;
@@ -125,6 +140,9 @@ ul.list-playlist {
     color: var(--first-color);
     font-size: 0.8em;
     text-decoration: none;
+}
+.list-playlist li:hover a{
+    color: var(--second-color);
 }
 /* /TOP-NAV */
 /* BOTTOM-NAV */
@@ -141,6 +159,7 @@ nav .bottom-nav {
     width: 15px;
     height: auto;
     vertical-align: middle;
+    filter: opacity(60%);
 }
 .bottom-nav .user img {
     width: 20px;
@@ -158,6 +177,12 @@ nav .bottom-nav {
     color: var(--second-color);
     font-size: 0.7em;
     font-weight: bold;
+}
+.app-installation:hover span {
+    color: var(--second-color);
+}
+.app-installation:hover img {
+    filter: opacity(100%);
 }
 /* /BOTTOM-NAV */
 /* /NAV */
@@ -342,6 +367,12 @@ footer .bar .listened {
 .left-footer .fa-heart {
     margin-right: 10px;
 } 
+.left-footer .sub:hover {
+    text-decoration: underline;
+}
+.left-footer a:hover {
+    color: var(--second-color);
+}
 /* CENTER-FOOTER */
 .center-footer {
     width: 50%;
