@@ -17,6 +17,7 @@ html {
     /* color */
     --first-color: #a3a3a3;
     --second-color: #fdfdfd; 
+    --underline-color: rgba(173,255,47,255);
     /* background-color */
     --background-color-nav: rgba(0,0,0,255);
     --background-color-container-right: rgba(20,25,34,255);
@@ -158,9 +159,6 @@ nav .bottom-nav {
     font-size: 0.7em;
     font-weight: bold;
 }
-.bottom-nav a {
-    text-decoration: none;
-}
 /* /BOTTOM-NAV */
 /* /NAV */
 /* CALL-TO-ACTION */
@@ -178,7 +176,7 @@ nav .bottom-nav {
 .call-to-action button {
     font-weight: bold;
     padding: 1em 3em;
-    margin-right: 1em;
+    margin-right: 3em;
     background-color: transparent;
     border-radius: 25px;
     text-transform: uppercase;
@@ -187,6 +185,11 @@ nav .bottom-nav {
     color: var(--second-color);
     text-decoration: none;
 }
+.call-to-action button:active, 
+.call-to-action button:focus, 
+.call-to-action button:hover {
+    transform: scale(1.2);
+}
 /* /CALL-TO-ACTION */
 /* CONTAINER-RIGHT */
 main .container-right {
@@ -194,7 +197,6 @@ main .container-right {
     height: 100%;
     background-color: var(--background-color-container-right);
     padding: var(--call-to-action-height) 1em 0 1em ;
-    
     overflow: auto;
 }
 /* NAV */
@@ -211,6 +213,15 @@ main .container-right {
     font-weight: bold;
     text-transform: uppercase;
 }
+.container-right nav .little-border {
+    width: 40px;
+    height: 2px;
+    margin: 2px auto;
+    background-color: var(--underline-color);
+}
+.container-right nav a:hover {
+    color: var(--second-color);
+}
 /* ROW */
 .row h2 {
     color: var(--second-color);
@@ -225,10 +236,14 @@ main .container-right {
     margin-right: 10px;
     text-align: center;
 }
+.row .content:active i,
+.row .content:focus i,
 .row .content:hover i {
     display: inline-block;
     z-index: 1;
 }
+.row .content:active img,
+.row .content:focus img,
 .row .content:hover img {
     filter: opacity(50%);
 }
