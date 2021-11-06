@@ -326,17 +326,6 @@ footer button {
     border: none;
     cursor: pointer;
 }
-footer .bar {
-    height: 4px;
-    background-color: rgba(255,255,255,0.3);
-    border-radius: 10px;
-}
-footer .bar .listened {
-    width: 45%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.8);
-    border-radius: 10px;
-}
 /* LEFT-FOOTER */
 .left-footer {
     align-items: center;
@@ -394,6 +383,9 @@ footer .bar .listened {
 .center-footer .top .fa-play-circle {
     font-size: 2em;
 }
+.center-footer .top .fa-play-circle:hover {
+    transform: scale(1.2);
+}
 /* BOTTOM */
 .center-footer .bottom {
     width: 100%;
@@ -404,8 +396,37 @@ footer .bar .listened {
     color: var(--second-color);
     font-size: 0.6em;
 }
+footer .bar {
+    height: 4px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
 .center-footer .bottom .bar {
     width: 80%;
+}
+footer .bar .listened {
+    width: 45%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    position: relative;
+}
+footer .bar .dot {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(193,193,193,255);
+    position: absolute;
+    top: -6px;
+    right: 0;
+    border-radius: 50%;
+    visibility: hidden;
+}
+.center-footer .bottom .bar:hover .dot {
+    visibility: visible;
+}
+.center-footer .bottom .bar:hover .listened {
+    background-color: var(--underline-color);
 }
 /* RIGHT */
 .right-footer {
@@ -419,5 +440,11 @@ footer .bar .listened {
 .right-footer i {
     color: var(--second-color);
     margin: 0 10px;
+}
+.right-footer .bar:hover .dot {
+    visibility: visible;
+}
+.right-footer .bar:hover .listened {
+    background-color: var(--underline-color);
 }
 /* /FOOTER */
