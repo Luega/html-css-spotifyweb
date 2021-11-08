@@ -266,7 +266,7 @@ main .container-right {
     flex-wrap: nowrap;
 }
 .row .content {
-    width: 150px;
+    width: calc(100% / 6 - 10px);
     margin-right: 10px;
     text-align: center;
 }
