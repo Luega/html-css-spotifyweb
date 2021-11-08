@@ -308,7 +308,9 @@ main .container-right {
     margin-top: 1em;
 }
 /* SECOND-ROW */
-
+.row .no-space-btw {
+    justify-content: flex-start;
+}
 .row .sub {
     color: var(--first-color);
     font-size: 0.6em;
