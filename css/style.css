@@ -476,14 +476,22 @@ footer .bar .dot {
     }
 }
 @media screen and (max-width: 600px) {
+    .padding-left {
+        padding-left: 0;
+    }
     main .nav-left {
         width: var(--nav-width-small);
+        text-align: center;
     }
     .top-nav .small-logo {
-        display: block;
+        display: inline-block;
     }
     nav .logo {
         display: none;
+    }
+    .menu-nav .img-menu {
+        border-left: none;
+        font-size: 0.8em;
     }
     nav .menu-nav span {
         display: none;
@@ -491,8 +499,11 @@ footer .bar .dot {
     nav .playlist {
         display: none;
     }
-    .bottom-nav {
+    .bottom-nav span {
         display: none;
+    }
+    .bottom-nav .app-installation {
+        border-bottom: none;
     }
     .call-to-action {
         width: calc(100% - var(--nav-width-small));
